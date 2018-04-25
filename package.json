@@ -1,5 +1,5 @@
 {
-  "name": "kingwear",
+  "name": "kingwear2",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ElijaHHall/KingWear.git"
+    "url": "git+https://github.com/ElijaHHall/kingwear2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ElijaHHall/KingWear/issues"
+    "url": "https://github.com/ElijaHHall/kingwear2/issues"
   },
-  "homepage": "https://github.com/ElijaHHall/KingWear#readme",
+  "homepage": "https://github.com/ElijaHHall/kingwear2#readme",
   "dependencies": {
     "bcrypt": "^2.0.1",
     "ejs": "^2.5.9",
