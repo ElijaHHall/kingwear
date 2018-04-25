@@ -5,10 +5,10 @@ var  app       = express();
 var bodyParser = require('body-parser');
 var db         = require('./models');
 var session    = require('express-session');
-    
+var User 	   = require('./models/users')
 
+app.set('port', process.env.PORT || 3000);
 app.set('views', './views');
-
 app.set('view engine', 'ejs') ;
 
 
@@ -60,8 +60,6 @@ app.post('/sessions', function(req, res){
 app.get('/login', function(req, res){
 	res.render('login');
 });
-
-app.set('port', process.env.PORT || 3000);
 
 app.listen(app.get('port'), () => { 
 	console.log(`✅ PORT: ${app.get('port')} 🌟`);
