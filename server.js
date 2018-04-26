@@ -5,11 +5,11 @@ var  app       = express();
 var bodyParser = require('body-parser');
 var db         = require('./models');
 var session    = require('express-session');
-var User 	   = require('./models/users')
+var User 	   = require('./models/users');
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', './views');
-app.set('view engine', 'ejs') ;
+app.set('view engine', 'ejs');
 
 
 app.use(express.static(__dirname + '/public'));
@@ -36,7 +36,7 @@ app.post('/api/shoes', function (req, res) {
 app.get('/signup', function(req, res){
 	res.sender('signup');
 });
-
+   
 app.post('/signup', function(req, res){
 	User.createSecure(req.body.email, req.body.password, function(err, newUserDoc){
 		res.json(newUserDoc);
