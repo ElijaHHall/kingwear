@@ -1,7 +1,4 @@
 
-
-
-
 var db = require('./models');
 
 var sampleKicks = [{
@@ -22,3 +19,5 @@ db.Shoe.create(sampleKicks, function(err, shoes){
 	console.log('created', shoes.length, 'shoes');
 	process.exit();
 });
+
+
