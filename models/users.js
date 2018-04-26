@@ -17,7 +17,7 @@ UserSchema.statics.createSecure = function(email, password, callback){
 		bcrypt.hash(password, salt, function(err, hash){
 			userModel.create({
 				email: email,
-				passwordDigest: hashpassword
+				passwordDigest: hash
 			}, callback);
 		});
 	});

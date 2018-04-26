@@ -23,7 +23,7 @@ app.use(session({
 
 app.get('/', function homepage (req, res) {
 	db.Shoe.find(function(err, dataShoe) {
-		res.render('index', { shoe: dataShoe});
+		res.render('signup', { shoe: dataShoe});
 	});
 });
 
@@ -32,9 +32,11 @@ app.post('/api/shoes', function (req, res) {
 		res.send(postShoe);
 	});
 });
-
+app.get('/home', function(req, res){
+	res.render('home');
+})
 app.get('/signup', function(req, res){
-	res.sender('signup');
+	res.render('signup');
 });
    
 app.post('/signup', function(req, res){
