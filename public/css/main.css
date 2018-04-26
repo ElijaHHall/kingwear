@@ -1,8 +1,8 @@
-div {
-	background: url('/images/happysneaks.jpg')
+.container {
+	background: url('/images/sneaks.jpg')
 
 }
 
 h1 {
-	color: white;
+	color: black;
 }
