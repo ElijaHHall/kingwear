@@ -33,19 +33,25 @@ app.post('/api/shoes', function (req, res) {
 		res.send(postShoe);
 	});
 });
+
+app.get('/main', function(req, res){
+	res.render('main');
+});
+
 app.get('/home', function(req, res){
 	res.render('home');
 });
+
 app.get('/signup', function(req, res){
-	console.log('signup get')
+	console.log('signup get');
 	res.render('signup');
 });
    
 app.post('/signup', function(req, res){
-	console.log('signup post')
+	console.log('signup post');
 
 	User.createSecure(req.body.email, req.body.password, function(err, newUserDoc){
-		console.log(req.body.email)
+		console.log(req.body.email);
 		// db.User.save({})
 
 		res.json(newUserDoc);
