@@ -24,7 +24,7 @@ app.use(session({
 
 app.get('/', function homepage (req, res) {
 	db.Shoe.find(function(err, dataShoe) {
-		res.render('signup', { shoe: dataShoe});
+		res.render('home', { shoe: dataShoe});
 	});
 });
 

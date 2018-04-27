@@ -1,0 +1,22 @@
+body {
+	background: url('/images/sneaks.jpg');
+	text-align: center;
+}
+
+.gsc-control-cse.gsc-control-cse-en {
+	width: 400px;
+	margin-top: 40px;
+	display: inline-block;
+	text-align: center;
+	background-color: transparent;
+	border-color: transparent;
+}
+#gsc-iw-id1 {
+	border-radius: 25px;
+	height: 30px;
+}
+
+.gsc-search-button.gsc-search-button-v2 {
+	border-radius: 50px;
+	color: lightblue;
+}
