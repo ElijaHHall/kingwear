@@ -1,0 +1,23 @@
+body {
+	text-align: center;
+	background: url('/images/sneaks.jpg')
+
+}
+.form-control {
+	padding: 10px 10px;
+	margin: 10px 10px;
+	width: 400px;
+	text-align: center;
+	display: inline-block;
+	text-align: center;
+}
+#login-button {
+	width: 76.31px;
+	display: inline-block;
+	text-align: center;
+}
+#log-option {
+	margin-top: 10px;
+	display: inline-block;
+	text-align: center;
+}
