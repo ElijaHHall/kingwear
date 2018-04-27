@@ -15,10 +15,11 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(session({
-	saveUnitialized : true,
-	resave: true,
 	secret: 'cookie',
-	cookie: {maxeAge:30*60*1000}
+	cookie: {maxeAge:30*60*1000},		
+	resave: true,
+	saveUninitialized: true
+
 }));
 
 app.get('/', function homepage (req, res) {
@@ -34,13 +35,19 @@ app.post('/api/shoes', function (req, res) {
 });
 app.get('/home', function(req, res){
 	res.render('home');
-})
+});
 app.get('/signup', function(req, res){
+	console.log('signup get')
 	res.render('signup');
 });
    
 app.post('/signup', function(req, res){
+	console.log('signup post')
+
 	User.createSecure(req.body.email, req.body.password, function(err, newUserDoc){
+		console.log(req.body.email)
+		// db.User.save({})
+
 		res.json(newUserDoc);
 	});
 });

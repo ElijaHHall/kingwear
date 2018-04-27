@@ -1,8 +1,24 @@
+body {
+	text-align: center;
+	background: black;
+}
+
+
 .container {
 	background: url('/images/sneaks.jpg')
 
 }
 
 h1 {
+	color: black;
+}
+
+article {
+	text-align: center;
+	padding: 10px;
+	color: black;
+}
+h3 {
+	padding: 40px;
 	color: black;
 }
