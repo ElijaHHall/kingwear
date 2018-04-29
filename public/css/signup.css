@@ -1,11 +1,15 @@
 body {
 	text-align: center;
-	background: url('/images/sneaks.jpg')
+	background: black;
+}
+
+header {
+	background: beige;
 }
 
 .form-control {
 	padding: 10px 10px;
-	margin: 10px 10px;
+	margin: 5px 5px;
 	width: 400px;
 	text-align: center;
 	display: inline-block;

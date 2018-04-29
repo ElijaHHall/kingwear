@@ -2,7 +2,20 @@ body {
 	background: black;
 	text-align: center;
 }
+.topnav {
+	background-color: #333;
+	overflow: hidden;
+}
 
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
 .gsc-control-cse.gsc-control-cse-en {
 	width: 400px;
 	margin-top: 40px;
@@ -25,18 +38,4 @@ header {
 	padding-top: 30px;
 	background-color: beige;
 	padding-left: 20px;
-}
-.topnav {
-	background-color: #333;
-	overflow: hidden;
-}
-
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
 }
