@@ -24,6 +24,7 @@ $(document).ready(function(){
 	});
 
 	$('#login-form').on('submit', function(e){
+		console.log('listening')
 		e.preventDefault();
 
 		var formInfo = {
@@ -33,7 +34,7 @@ $(document).ready(function(){
 		console.log(formInfo);
 
 		$.ajax({
-			url: '/login',
+			url: '/sessions',
 			method: 'POST',
 			data: formInfo,
 			succes: function(response){
