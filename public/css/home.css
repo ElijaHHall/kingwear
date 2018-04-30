@@ -1,6 +1,6 @@
 body {
 	text-align: center;
-	background: black;
+	background: #333;
 }
 header {
 	background-color: beige;
@@ -19,4 +19,8 @@ header {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+}
+
+#signupbtn {
+    margin-bottom: 10px;
 }
