@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var db         = require('./models');
 var session    = require('express-session');
 var User 	   = require('./models/users');
+var Shoe 	   = require('./models/shoes');
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', './views');
@@ -58,12 +59,12 @@ app.post('/signup', function(req, res){
 	});
 });
 
-app.get('/profile', function(req, res){
-	User.findOne({_id: req.session.userId}, function(err, userDoc){
-		res.render('profile', {user: userDoc});
-	});
+app.get('/profile', function (req, res) {
+  // find the user currently logged in
+  db.User.findOne({_id: req.session.userId}, function (err, currentUser) {
+    res.render('profile.ejs', {username:currentUser});
+  });
 });
-
 app.post('/sessions', function(req, res){
 	User.authenticate(req.body.email, req.body.password, function(err, existingUserDoc){
 		if (err) console.log('error is' + err);
@@ -75,6 +76,10 @@ app.post('/sessions', function(req, res){
 app.get('/login', function(req, res){
 	console.log('login get');
 	res.render('login');
+});
+app.get('/shoes', function(req, res){
+	console.log('shoe searched');
+	res.render('searched');
 });
 
 app.listen(app.get('port'), () => { 

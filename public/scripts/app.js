@@ -1,6 +1,4 @@
 
-
-
 $(document).ready(function(){
 
 	$('#signup-form').on('submit', function(e){
@@ -19,12 +17,14 @@ $(document).ready(function(){
 			data: formInfo,
 			succes: function(response){
 				$('h1').append(response.email + 'is now signed up!');
+				window.location = '/profile';
+
 			}
 		});
 	});
 
 	$('#login-form').on('submit', function(e){
-		console.log('listening')
+		console.log('listening');
 		e.preventDefault();
 
 		var formInfo = {
@@ -37,10 +37,11 @@ $(document).ready(function(){
 			url: '/sessions',
 			method: 'POST',
 			data: formInfo,
-			succes: function(response){
-				window.location = '/profile';
+			success: function(response){
+				window.location = ('/profile');
 			}
 		});
+		// $('#search-bar').append($(h1));
+
 	});
 });
-		console.log('submit');

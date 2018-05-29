@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+
 var Schema = mongoose.Schema;
 
 var shoeSchema = new Schema ({
@@ -7,6 +8,12 @@ var shoeSchema = new Schema ({
 	size: Number,
 	gender: String
 });
+
+
+
+
+
+
 
 var Shoe = mongoose.model('Shoe', shoeSchema);
 

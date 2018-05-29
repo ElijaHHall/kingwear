@@ -5,6 +5,7 @@ var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
 	email: String,
+	password: String,
 	passwordDigest: String
 });
 
@@ -20,6 +21,7 @@ UserSchema.statics.createSecure = function(email, password, callback){
 				passwordDigest: hash
 			}, callback);
 		});
+
 	});
 };
 
