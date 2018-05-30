@@ -4,17 +4,18 @@
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 	
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	<title>KingWear</title>
 </head>
 <body>
 	<div class="topnav" id="myTopnav">
-	  <a href="/home" class="active">Home</a>
 	  <a href="/main">Main</a>
 	  <a href="/Signup">Signup</a>
 	  <a href="/login">Login</a>
@@ -22,7 +23,14 @@
 	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 	</div>
 <header>
-	<h1> Search for footwear</h1>
+	<div>
+
+		<h1>Welcome to KingWear</h1>
+			<article>
+				<h4>Search for the kicks you love...</h4>
+			</article>
+
+	</div>
 	<script id="search-bar">
 		(function() {
 		var cx = '003003275421639491016:awxrog0a2rw';
@@ -34,13 +42,10 @@
 		s.parentNode.insertBefore(gcse, s);
 		})();
 	</script>
-<gcse:search class="img-rounded"></gcse:search>
-
+<gcse:searchbox></gcse:searchbox>
+<gcse:searchresults defaultToImageSearch="true"></gcse:searchresults>
 </div>
 </header>
-<footer>
-	
-</footer>
 <script src="/scripts/app.js"></script>
 </body>
 </html>

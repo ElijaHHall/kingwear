@@ -1,0 +1,44 @@
+body {
+	background: #333;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+
+}
+.gsc-control-cse.gsc-control-cse-en {
+	width: 400px;
+	margin-top: 40px;
+	display: inline-block;
+	text-align: center;
+	background-color: transparent;
+	border-color: transparent;
+}
+#gsc-iw-id1 {
+	border-radius: 25px;
+	height: 30px;
+}
+
+.gsc-search-button.gsc-search-button-v2 {
+	border-radius: 50px;
+	color: lightblue;
+}
+
+header {
+	padding-top: 30px;
+	background: beige;
+	padding-left: 20px;
+}
+
+.topnav {
+	background-color: #333;
+	overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}

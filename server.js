@@ -8,7 +8,7 @@ var session    = require('express-session');
 var User 	   = require('./models/users');
 var Shoe 	   = require('./models/shoes');
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3001);
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
@@ -29,11 +29,11 @@ app.get('/', function homepage (req, res) {
 	});
 });
 
-app.post('/api/shoes', function (req, res) {
-	db.Shoe.create(req.body).then(function(postShoe){
-		res.send(postShoe);
-	});
-});
+// app.post('/api/shoes', function (req, res) {
+// 	db.Shoe.create(req.body).then(function(postShoe){
+// 		res.send(postShoe);
+// 	});
+// });
 
 app.get('/main', function(req, res){
 	res.render('main');
