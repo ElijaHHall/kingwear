@@ -4,6 +4,9 @@ body {
 	font-family: 'Raleway', sans-serif;
 
 }
+article {
+	padding-bottom: 20px ;
+}
 
 .gsc-control-cse.gsc-control-cse-en {
 	width: 400px;
