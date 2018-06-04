@@ -41,6 +41,7 @@ $(document).ready(function(){
 				window.location = ('/profile');
 			}
 		});
+	$('#search-bar').append($('h2'));
 		// $('#search-bar').append($(h1));
 
 	});
