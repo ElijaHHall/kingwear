@@ -1,6 +1,10 @@
 
+//call jquery
 $(document).ready(function(){
+//getting from id on signup ejs
 
+	
+	
 	$('#signup-form').on('submit', function(e){
 		e.preventDefault();
 
@@ -15,7 +19,7 @@ $(document).ready(function(){
 			url: '/signup',
 			method: 'POST',
 			data: formInfo,
-			succes: function(response){
+			success: function(response){
 				$('h1').append(response.email + 'is now signed up!');
 				window.location = '/profile';
 
@@ -41,8 +45,19 @@ $(document).ready(function(){
 				window.location = ('/profile');
 			}
 		});
-	$('#search-bar').append($('h2'));
-		// $('#search-bar').append($(h1));
+	}); // this is the end of the log in for submit event listener;
 
-	});
+	
+
+
+	$("#save-button").click(function(event){
+		console.log('searched');
+		e.preventDefault();
+
+		var searchInfo = {
+			searchString: $('.form-group')
+
+		}
+
+	})
 });

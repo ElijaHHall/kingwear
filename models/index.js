@@ -6,9 +6,10 @@ if (process.env.NODE_ENV == 'production') {
 	mongoose.connect('mongodb://localhost/kingwear');
 }
 
-module.exports.Shoe = require('./search');
-module.exports.User = require('./users')
 
+module.exports.Shoe = require('./shoes');
+module.exports.User = require('./users');
+// module.exports.Search = require('./search');
 
 
 

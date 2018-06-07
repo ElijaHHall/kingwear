@@ -1,12 +1,15 @@
 
-
 var express    = require('express');
 var  app       = express();
 var bodyParser = require('body-parser');
 var db         = require('./models');
 var session    = require('express-session');
 var User 	   = require('./models/users');
-var Shoe 	   = require('./models/shoes');
+var Shoes 	   = require('./models/shoes');
+
+
+
+app.use(bodyParser());
 
 app.set('port', process.env.PORT || 3001);
 app.set('views', './views');
@@ -29,11 +32,6 @@ app.get('/', function homepage (req, res) {
 	});
 });
 
-// app.post('/api/shoes', function (req, res) {
-// 	db.Shoe.create(req.body).then(function(postShoe){
-// 		res.send(postShoe);
-// 	});
-// });
 
 app.get('/main', function(req, res){
 	res.render('main');
@@ -77,10 +75,53 @@ app.get('/login', function(req, res){
 	console.log('login get');
 	res.render('login');
 });
-app.get('/shoes', function(req, res){
-	console.log('shoe searched');
-	res.render('searched');
+
+app.get('/api/shoes/:id', function shoesShow(req, res) {
+	console.log("work pls");
+  // find all shoes in db
+  db.Shoe.findOne({_id:req.params.id}, function(err, shoe) {
+  	console.log("trying");
+  	console.log(shoe);
+    res.json({ shoe: shoe });
+  });
 });
+
+app.get('/api/shoes', function shoesIndex(req, res) {
+	console.log("work pls");
+  // find all shoes in db
+  db.Shoe.find({}, function(err, allShoes) {
+  	console.log("trying");
+  	console.log(allShoes);
+    res.json({ shoes: allShoes });
+  });
+});
+
+app.post('/api/shoes', function shoesCreate(req, res){
+	console.log("working");
+	console.log(req.body);
+	var newShoe = {
+		type: req.body.type,
+		userId: req.body.userId,
+		brand: req.body.brand,
+		size: req.body.size,
+		gender: req.body.gender,
+		searchUrl: req.body.searchUrl
+	};
+
+	db.Shoe.create(req.body, function(err, newShoes){
+		console.log(newShoes);
+		res.json({newShoes: newShoes});
+	});
+});
+
+app.delete('/api/shoes/:id', function deleteShoe(req, res) {
+	db.Shoe.remove({_id: req.params.id }, function(err) {
+		if(err){ return console.log(err); }
+		console.log('removal of id= ' + req.params.id +' successful.');
+		res.status(200).send();
+	});
+});
+
 
 app.listen(app.get('port'), () => { 
 	console.log(`✅ PORT: ${app.get('port')} 🌟`);
