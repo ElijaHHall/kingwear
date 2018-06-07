@@ -8,12 +8,11 @@ console.log('string')
   	url: '/api/shoes',
   	success: function(response){
   		for(let i=0; i<response.shoes.length; i++){
-  			$('#shoelist').append('<h4 id=' + response.shoes[i]._id + '>' + response.shoes[i].brand + '</h4> <button id="' + response.shoes[i]._id + '" name="submit" class="delete"> Delete </button>');
+  			$('#shoelist').append('<h4 id=' + response.shoes[i]._id + '>' + response.shoes[i].brand + '</h4> <button id="' + response.shoes[i]._id + '" name="submit" class="delete btn btn-danger"> Delete </button>');
   			console.log(response.shoes)
   		}
   	}
   });
-
 
   var shoelist = $('#shoelist');
   var allShoes = [];
@@ -28,8 +27,6 @@ console.log('string')
   		error: console.log('nope')
   	});
   });
-
-
 
   function newShoeSuccess(json) {
   	$('.form-group input').val('');
@@ -86,8 +83,9 @@ $('body').on('click','.delete', function(){
 	console.log(id);
 	
 	$(this).prev().remove();
-	
-	$(this).remove();
+
+		$(this).remove();
+
 
 	var heading = $(this).closest('h4');
 	// heading.remove()
@@ -104,7 +102,6 @@ $('body').on('click','.delete', function(){
 		});
 });
 
-
 function handleNewShoeSubmit(e){
 	var shoeId = $('#shoeModal').data('shoe-id');
 	var shoeName = $('#shoeName').val();
@@ -116,7 +113,6 @@ function handleNewShoeSubmit(e){
 	};
 
 }
-
 
 
 });
